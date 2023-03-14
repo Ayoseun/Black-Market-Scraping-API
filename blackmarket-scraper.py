@@ -41,10 +41,10 @@ def scrape():
                 cells = row.find_all("td")
                 # Extract the currency, date, and rate information
                 currency = cells[0].text.strip()
-                rate = cells[1].text.strip()
+                rate = cells[1].text.strip().replace('\u20a6', '')
                 date = cells[2].text.strip()
                 # Store the information as an object in the array
-                data.append({"Currency": currency, "Rate": rate, "Date": date})
+                data.append({"Currency": currency, "Rate": str(rate), "Date": date})
             # Return the data as JSON
             return jsonify(data)
         else:
