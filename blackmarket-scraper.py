@@ -1,3 +1,7 @@
+
+import schedule
+import time
+import json
 from flask import Flask, jsonify
 import requests
 from bs4 import BeautifulSoup
@@ -58,5 +62,34 @@ def scrape():
         logging.error(error_msg)
         return jsonify({"error": error_msg}), 500
 
+
+def scrape_and_log():
+    """Scrape the data and log any errors."""
+    try:
+        data = scrape()
+        # Write the data to a JSON file
+        with open('data.json', 'w') as f:
+            json.dump(data, f)
+        print("Data scraped successfully.")
+        logging.error(data)
+    except Exception as e:
+        # Log the error and raise it to halt the program
+        error_msg = f"Error: {str(e)}"
+        logging.error(error_msg)
+        raise e
+
+# Schedule the scraping to run every 10 minutes
+schedule.every(5).minutes.do(scrape_and_log)
+
 if __name__ == '__main__':
-    app.run(debug=True)
+    while True:
+        # Run the scheduled tasks
+        schedule.run_pending()
+        # Wait 1 second before checking for scheduled tasks again
+        time.sleep(1)
+        # Start the Flask app
+        app.run(debug=False)
+
+
+
+
