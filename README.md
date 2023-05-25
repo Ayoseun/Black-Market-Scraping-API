@@ -4,6 +4,27 @@ Welcome to the Black Market Scraping API, a Flask-based web application that scr
 ### Installation
 To install the necessary dependencies for this application, run the following command:
 
+create a virtual environment
+```
+python3 -m venv [your environment name]
+```
+
+##### activate the environment
+On Windows (Command Prompt):
+```
+source myenv/bin/activate
+```
+
+On Windows (Command Prompt):
+```
+myenv\Scripts\activate.bat
+```
+
+On Windows (PowerShell):
+```
+myenv\Scripts\Activate.ps1
+```
+
 ```
 pip install -r requirements.txt
 ```

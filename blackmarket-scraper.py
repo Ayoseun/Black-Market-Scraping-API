@@ -1,12 +1,22 @@
 
 import schedule
 import time
+import secrets
 import json
-from flask import Flask, jsonify
+from flask import Flask, jsonify, request
 import requests
 from bs4 import BeautifulSoup
 import logging
+from pymongo import MongoClient
+from datetime import datetime, timedelta
 import os
+
+
+
+# Connect to the MongoDB database
+client = MongoClient('mongodb+srv://ayoseun:Jared15$@cashflakes.dgkmv.mongodb.net/Auth?retryWrites=true&w=majority')
+db = client['bmr']  # Replace with your actual database name
+collection = db['users']
 
 app = Flask(__name__)
 
@@ -21,11 +31,26 @@ API_KEY = os.getenv('API_KEY')
 @app.route('/', methods=['GET'])
 def index():
     """Return a welcome message."""
-    return "Welcome to the Black Market Scraping API. For data, visit /market"
+    return "Welcome to the Black Market Rate API. For markets data, visit this route /market"
 
 @app.route('/market', methods=['GET'])
 def scrape():
-    """Scrape the black market exchange rates and return the data as JSON."""
+  
+    key = request.args.get('key')
+    if not key:
+        return jsonify({"error": "API key is missing."}), 400
+
+    # Check if the API key exists in the database
+    user = collection.find_one({"userKey": key})
+    if not user:
+        return jsonify({"error": "Invalid API key."}), 401
+
+     # Check if the elapsedTime is less than today
+    elapsed_time = user.get('elapsedTime')
+    if elapsed_time < datetime.now():
+        return jsonify({"error": "Elapsed time has expired."}), 403
+    # Rest of your code
+
     try:
         page = requests.get('https://www.ngnrates.com/black-market')
         soup = BeautifulSoup(page.content, 'html.parser')
@@ -61,6 +86,54 @@ def scrape():
         error_msg = f"Error: {str(e)}"
         logging.error(error_msg)
         return jsonify({"error": error_msg}), 500
+
+
+
+@app.route('/user', methods=['POST'])
+def generate():
+    """Add user data to the database."""
+    data = request.get_json()
+    elapsed_time = data.get('elapsedTime')
+    address = data.get('elapsedTime')
+    if not address or data is None:
+        return jsonify({"error": "Empty payload. User wallet address and elapsed time are required."}), 400
+
+    # Check if elapsed_time is not an integer
+    if not isinstance(elapsed_time, int):
+        return jsonify({"error": "Invalid value for elapsed time. Expected an integer."}), 400
+
+    # Generate a random hex user key
+    user_key = secrets.token_hex(16)
+
+    # Convert elapsed_time to a valid datetime object
+    try:
+        if elapsed_time == 30:
+            elapsed_time = datetime.now() + timedelta(days=30)
+        elif elapsed_time == 60:
+            elapsed_time = datetime.now() + timedelta(days=60)
+        elif elapsed_time == 90:
+            elapsed_time = datetime.now() + timedelta(days=90)
+        elif elapsed_time == 365:
+            elapsed_time = datetime.now() + timedelta(days=365)
+        else:
+            raise ValueError("Invalid value for elapsed time.")
+    except (ValueError, TypeError):
+        return jsonify({"error": "Invalid value for elapsed time. Expected a valid integer."}), 400
+
+    # Create the user data object
+    user_data = {
+        "userKey": user_key,
+        "address":address,
+        "elapsedTime": elapsed_time
+    }
+
+    # Insert the user data into the database
+    result = collection.insert_one(user_data)
+
+    return jsonify({"response": "User data added successfully.", "inserted_id": str(result.inserted_id),"key": str(user_key)}), 201
+# ...
+
+
 
 
 def scrape_and_log():
