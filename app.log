@@ -1,0 +1,29 @@
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 665-189-884
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2023 18:32:20] "[33mGET /scraped_data HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2023 18:32:22] "[33mGET /scraped_data HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2023 18:32:22] "[33mGET /scraped_data HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2023 18:32:59] "[33mGET /scraped_data HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2023 18:33:04] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2023 18:33:14] "GET /market HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 665-189-884
+INFO:werkzeug: * Detected change in '/Users/ayoseun/Documents/GitHub/Black-Market-Scraping-API/http_v.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 665-189-884
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:8080
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 665-189-884
+INFO:werkzeug:127.0.0.1 - - [27/Nov/2023 18:34:07] "GET /market HTTP/1.1" 200 -
