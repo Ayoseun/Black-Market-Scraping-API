@@ -2,8 +2,6 @@ import asyncio
 import os
 import requests
 import websockets
-from flask import Flask
-from flask_socketio import SocketIO, emit
 import requests
 from bs4 import BeautifulSoup
 import os
@@ -32,6 +30,7 @@ async def scrape_and_emit(websocket):
                 rate = cells[1].text.strip().replace('\u20a6', '')
                 date = cells[2].text.strip()
                 data.append({"Currency": currency, "Rate": str(rate), "Date": date})
+                print(data)
          
             await websocket.send(str(data))
         else:
