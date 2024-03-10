@@ -27,3 +27,128 @@ INFO:werkzeug: * Restarting with stat
 WARNING:werkzeug: * Debugger is active!
 INFO:werkzeug: * Debugger PIN: 665-189-884
 INFO:werkzeug:127.0.0.1 - - [27/Nov/2023 18:34:07] "GET /market HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:8080
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 665-189-884
+INFO:werkzeug: * Detected change in '/Users/ayoseun/Documents/GitHub/Black-Market-Scraping-API/http_v.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 665-189-884
+INFO:werkzeug: * Detected change in '/Users/ayoseun/Documents/GitHub/Black-Market-Scraping-API/http_v.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:4200
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 665-189-884
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2023 16:56:35] "[31m[1mPOST / HTTP/1.1[0m" 405 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2023 16:56:40] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2023 16:56:48] "GET /market HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:4200
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 665-189-884
+ERROR:root:Error: 'NoneType' object has no attribute 'find_next'
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2023 17:07:07] "[35m[1mGET /market HTTP/1.1[0m" 500 -
+INFO:werkzeug: * Detected change in '/Users/ayoseun/Documents/GitHub/Black-Market-Scraping-API/m.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 665-189-884
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:4200
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 665-189-884
+ERROR:root:Error: 'NoneType' object has no attribute 'find_next'
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2023 17:07:47] "[35m[1mGET /market HTTP/1.1[0m" 500 -
+ERROR:root:Error: 'NoneType' object has no attribute 'find_next'
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2023 17:07:54] "[35m[1mGET /market HTTP/1.1[0m" 500 -
+INFO:werkzeug: * Detected change in '/Users/ayoseun/Documents/GitHub/Black-Market-Scraping-API/m.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 665-189-884
+INFO:werkzeug: * Detected change in '/Users/ayoseun/Documents/GitHub/Black-Market-Scraping-API/m.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 665-189-884
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:4200
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 665-189-884
+ERROR:root:Error: 'NoneType' object has no attribute 'next_element'
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2023 17:12:21] "[35m[1mGET /market HTTP/1.1[0m" 500 -
+ERROR:root:Error: 'NoneType' object has no attribute 'next_element'
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2023 17:12:24] "[35m[1mGET /market HTTP/1.1[0m" 500 -
+ERROR:root:Error: 'NoneType' object has no attribute 'next_element'
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2023 17:12:26] "[35m[1mGET /market HTTP/1.1[0m" 500 -
+INFO:werkzeug: * Detected change in '/Users/ayoseun/Documents/GitHub/Black-Market-Scraping-API/ws_v.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 665-189-884
+INFO:werkzeug: * Detected change in '/Users/ayoseun/Documents/GitHub/Black-Market-Scraping-API/ws_v.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 665-189-884
+INFO:werkzeug: * Detected change in '/Users/ayoseun/Documents/GitHub/Black-Market-Scraping-API/m.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 665-189-884
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:4200
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 665-189-884
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2023 17:48:08] "GET /market HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in '/Users/ayoseun/Documents/GitHub/Black-Market-Scraping-API/m.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:4200
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 665-189-884
+INFO:werkzeug: * Detected change in '/Users/ayoseun/Documents/GitHub/Black-Market-Scraping-API/m.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:4200
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 665-189-884
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2023 17:53:41] "GET /market HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2023 17:53:53] "GET /market HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in '/Users/ayoseun/Documents/GitHub/Black-Market-Scraping-API/m.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:4200
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 665-189-884
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2023 17:56:10] "GET /market HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:4200
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 665-189-884
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2023 18:00:23] "[33mGET /market HTTP/1.1[0m" 404 -
+INFO:werkzeug: * Detected change in '/Users/ayoseun/Documents/GitHub/Black-Market-Scraping-API/m.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:4200
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 665-189-884
+INFO:werkzeug:127.0.0.1 - - [28/Nov/2023 18:01:46] "[33mGET /market HTTP/1.1[0m" 404 -

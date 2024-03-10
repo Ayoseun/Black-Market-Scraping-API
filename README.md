@@ -34,7 +34,7 @@ Usage
 To run the application, execute the following command:
 
 ```
-gunicorn blackmarket-scraper:app 
+gunicorn http:app 
 
 ```
 This will start the Flask development server, which you can access by visiting http://localhost:5000 in your web browser.
@@ -63,4 +63,19 @@ Replace <your_api_key_here> with your actual API key. Note that this file should
 License
 This project is licensed under the MIT License - see the LICENSE file for details.
 
+Setup VM service
+
+[Unit]
+Description=NGN Rates
+After=network.target
+
+[Service]
+ExecStart=/bin/bash -c 'source /home/apps/Black-Market-Scraping-API/myenv/bin/activate && python3 /home/apps/Black-Market-Scraping-API/ws_v.py'
+WorkingDirectory=/home/apps/Black-Market-Scraping-API
+User=ayo_solomon
+Group=groupname
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
 

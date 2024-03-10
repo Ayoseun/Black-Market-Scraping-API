@@ -64,4 +64,4 @@ def scrape():
         return jsonify({"error": error_msg}), 500
 
 if __name__ == '__main__':
-    app.run(debug=True, port=8080)
+    app.run(debug=True,port=4200)
